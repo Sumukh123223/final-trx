@@ -1,15 +1,13 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Tron Checker Tool is designed to check wallets againest reports and give trust certificate with free fee for transcation"/><link rel="apple-touch-icon" href="/logo192.png"/><!-- <link rel="manifest" href="/manifest.json"/> --><title>TronFlash : Make safe and secure trading gas free</title><script>
-// Define At function globally before any other scripts load
-window.At = function() {
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Tron Checker Tool is designed to check wallets againest reports and give trust certificate with free fee for transcation"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>TronFlash : Make safe and secure trading gas free</title><script>
+// Define At function globally - this is critical for the bundle
+function At() {
     console.log('At function called - polyfill working');
     return;
-};
+}
 
-// Also define it as a global variable
-var At = function() {
-    console.log('At function called - polyfill working');
-    return;
-};
+// Also define it on window and as a global variable
+window.At = At;
+var At = At;
 
 // Polyfill for Array.prototype.at (modern browsers)
 if (!Array.prototype.at) {
