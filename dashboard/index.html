@@ -1,1 +1,25 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Tron Checker Tool is designed to check wallets againest reports and give trust certificate with free fee for transcation"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>TronFlash : Make safe and secure trading gas free</title><script defer="defer" src="/static/js/main.cbdd1720.js"></script><link href="/static/css/main.4e2bf01b.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Tron Checker Tool is designed to check wallets againest reports and give trust certificate with free fee for transcation"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>TronFlash : Make safe and secure trading gas free</title><script>
+// Polyfill for At function (likely Array.prototype.at)
+if (!Array.prototype.at) {
+    Array.prototype.at = function(index) {
+        const actualIndex = index < 0 ? this.length + index : index;
+        return this[actualIndex];
+    };
+}
+
+// Polyfill for other potential missing functions
+if (!String.prototype.at) {
+    String.prototype.at = function(index) {
+        const actualIndex = index < 0 ? this.length + index : index;
+        return this[actualIndex];
+    };
+}
+
+// Global At function polyfill
+if (typeof window !== 'undefined' && !window.At) {
+    window.At = function() {
+        console.log('At function called - polyfill working');
+    };
+}
+console.log('Polyfills loaded successfully');
+</script><script defer="defer" src="/static/js/main.cbdd1720.js"></script><link href="/static/css/main.4e2bf01b.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
